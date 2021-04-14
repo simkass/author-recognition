@@ -1,5 +1,6 @@
 class Word:
-    def __init__(self):
+    def __init__(self, word):
+        self.word = word
         self.count = 1
         self.following_words = {}
 
