@@ -4,8 +4,8 @@ class Word:
         self.count = 1
         self.following_words = {}
 
-    def __iadd__(self, x):
-        self.count += x
+    def increment_count(self):
+        self.count += 1
 
     def get_count(self):
         return self.count
