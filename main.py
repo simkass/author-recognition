@@ -14,10 +14,12 @@ def evaluate_similarity(author1_collection, author2_collection):
         common_words_total_a2 += author2_collection.dictionary[word].get_count()
 
     for word in common_words:
-        similarity += pow((author2_collection.dictionary[word].get_count() / common_words_total_a2) - (
-            author1_collection.dictionary[word].get_count() / common_words_total_a1), 2)
+        a1i = (author1_collection.dictionary[word].get_count() / common_words_total_a1)
+        a2i = (author2_collection.dictionary[word].get_count() / common_words_total_a2)
+        similarity += pow(a2i - a1i, 2)
 
-    return round(0.1 / math.sqrt(similarity), 2)
+    similarity = round(1 / math.sqrt(similarity), 3)
+    return similarity
 
 
 def identify_author(mystery_author):
@@ -29,7 +31,7 @@ def identify_author(mystery_author):
         author_collection = AuthorCollection(author)
         sim = evaluate_similarity(mystery_author_collection, author_collection)
         similarities[author] = sim
-        print(bcolors.ENDC + 'Similarity between mystery author and ' + author + ': ' + str(sim))
+        print(bcolors.ENDC + 'Similarity between unseen text and ' + author + ': ' + str(sim))
 
     identification = max(similarities, key=similarities.get)
     if identification == mystery_author:

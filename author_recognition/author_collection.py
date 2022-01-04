@@ -42,5 +42,5 @@ class AuthorCollection:
             if word not in self.dictionary[previous_word].get_following_words().keys():
                 self.dictionary[previous_word].add_following_word(word)
             else:
-                self.dictionary[previous_word].get_following_words()[word] += 1
+                self.dictionary[previous_word].increment_following_word(word)
         return word
