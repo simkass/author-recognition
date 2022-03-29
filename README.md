@@ -20,3 +20,5 @@ Let’s first analyze the word *pray.* We have in our database 4600 lines writte
 To make a more confident guess, we go back to our mention of **specific combinations of words**. On its own, *pray* does not contain enough information to identify the author with a considerable degree of certainty. However, when we study the combination of the words *pray* and *you,* we get a different story. In his 35 uses of the word *pray*, William Shakespeare follows it up with *you* on 16 different occasions. In *A Connecticut Yankee in King Arthur’s Court* this combination doesn’t appear once! 
 
 We get a similar story when analyzing the word *speak*. Both authors use this word on numerous occasions. However, Mark Twain never writes it before the word *not* whereas Shakespeare wrote *speak not* on two different occasions in our database. We can now very confidently say that the sentence was written by William Shakespeare which would be correct since it was taken from *Macbeth*.
+
+Full Article Here: https://simonkassab.com/#/author
